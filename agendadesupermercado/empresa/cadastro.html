@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success px-2">
+        <a class="navbar-brand" href="index.html">Lista de Supermercado</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html"><i class="fas fa-user"></i> Cliente </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><i class="fas fa-building"></i></i> Empresa</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container py-3 mt-5">
+            <div class="card col-lg-6 mx-auto">
+                <h5 class="card-header text-center">Empresa - Realizar cadastro</h5>
+                <div class="card-body">
+                    <form>
+                        <h5>Dados Básicos</h5>
+                        <div class="form-group py-1">
+                            <label for="name">Nome</label>
+                            <input type="email" required class="form-control" id="nome"
+                                placeholder="Digite seu nome aqui">
+                        </div>
+                        <div class="form-group py-1">
+                            <label for="cnpj">CNPJ</label>
+                            <input type="number" required class="form-control" id="cnpj" placeholder="CNPJ">
+                        </div>
+                        <div class="form-group py-1">
+                            <label for="exampleInputEmail1">Endereço de e-mail</label>
+                            <input type="email" id="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Digite e-mail aqui">
+                            <small class="form-text text-muted">Nunca compartilharemos seu e-mail com
+                                mais ninguém.</small>
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="exampleInputPassword1">Senha</label>
+                            <div class="input-group">
+                              <input type="password" class="form-control" id="senha" placeholder="Digite a senha aqui">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" id="change" type="button"><i class="fa fa-eye-slash" id="olho" aria-hidden="true"></i></button>
+                              </div>
+                              </div>
+                            </div>
+                            <small class="form-text text-muted">* Senha deve conter no mínimo 6 caracteres. *</small>
+                          </div>
+                        <hr />
+                        <h5 class="py-1 mt-2">Endereço</h5>
+
+                        <div class="form-group py-1">
+                            <label for="cep">CEP</label>
+                            <input type="number" class="form-control" id="cep" placeholder="Digite o cep ">
+                        </div>
+                        <small class="form-text text-muted">* Senha deve conter no mínimo 6 caracteres. *</small>
+                      </div>
+                      <hr /> 
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro ">
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="rua">Rua</label>
+                            <input type="text" class="form-control" id="rua" placeholder="Digite a rua ">
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="numero">Número</label>
+                            <input type="number" class="form-control" id="numero" placeholder="Digite o número">
+                        </div>
+
+                        <div class="text-center">
+                            <button type="button" class="btn btn-success px-5 mt-3" id="btnCadastro">Cadastrar</button>
+                            <p class="py-1">Já possuí conta? <a href="login.html">Acesse aqui</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </main>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold">TimeSupermercado</a>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-database-compat.js"></script>
+
+<script src="https://kit.fontawesome.com/88b528e79b.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="../js/app.js"></script>
+<script src="../js/cadastro-empresa.js"></script>
+
+</html>
