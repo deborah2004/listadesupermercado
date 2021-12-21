@@ -81,7 +81,8 @@ function removerDoCarrinho(carrinho, key) {
         console.log("qtd: ", carrinho.quantidade)
         total -= (parseFloat(carrinho.preco) * parseInt(carrinho.quantidade));
         changeTotal.innerText = "R$ " + total.toFixed(2);
-    })
+    
+        ItensDoCarrinho= ItensDoCarrinho.filter(item=>item.key!==carrinho.key)
 
 }
 
