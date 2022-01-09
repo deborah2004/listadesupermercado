@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body class="h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success px-2">
+        <a class="navbar-brand me-auto" href="lista.html">Lista de Supermercado</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="sair"><i class="fas fa-sign-out-alt fa-lg"></i> Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container py-3 mt-5">
+            <div class="card w-75 mx-auto">
+                <div class="card-body">
+                    <h5 class="py-2">Editar Produto</h5>
+                    <div class="form-group py-1">
+                        <label for="codigo">Código de Barras</label>
+                        <input type="number" class="form-control" id="codigo" placeholder="Código">
+                    </div>
+                    <div class="form-group py-1">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="form-group py-1">
+                        <label for="preco">Preço</label>
+                        <input type="number" class="form-control" id="preco" placeholder="Preço">
+                    </div>
+                    <div class="form-group py-1">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="form-group py-1">
+                        <label for="descricao">Descrição</label>
+                        <textarea class="form-control" id="descricao" rows="3" placeholder="Descrição"></textarea>
+                    </div>
+                    <div class="text-end mt-3">
+                        <button class="btn btn-danger" data-toggle="modal"
+                            data-target="#exampleModalCenter">Excluir</button>
+                        <button class="btn btn-primary" id="salvar">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Excluir Produto</h5>
+                        <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você deseja realmente detelar esse Produto?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" id="deletar-produto">Sim, apagar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold">TimeSupermercado</a>
+        </div>
+    </footer>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-database-compat.js"></script>
+
+<script src="https://kit.fontawesome.com/88b528e79b.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="../js/app.js"></script>
+<script src="../js/detalhes-produto.js"></script>
+
+</html>

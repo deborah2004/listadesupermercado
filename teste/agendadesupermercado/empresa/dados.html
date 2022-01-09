@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Alterar Dados</title>
+
+
+</head>
+
+<body class="h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-2">
+        <a class="navbar-brand me-auto" href="index.html">Lista de Supermercado</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-home fa-lg"></i> Principal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="historico.html"><i class="fas fa-history"></i> Histórico</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="carrinho.html"> <i class="fas fa-cart-plus"></i> Minha lista</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="dados.html"> <i class=""></i> Dados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="sair"><i class="fas fa-sign-out-alt fa-lg"></i> Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container py-3 mt-5">
+            <div class="card col-lg-6 mx-auto">
+                <h5 class="card-header text-center">Atualizar cadastro</h5>
+                <div class="card-body">
+                    <form>
+                        <h5>Dados Pessoais</h5>
+                        <div class="form-group py-1">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome aqui">
+                        </div>
+                        <div class="form-group py-1">
+                            <label for="cpf">CPF</label>
+                            <input type="number" class="form-control" id="cpf" placeholder="CPF">
+                        </div>
+                        <div class="form-group py-1">
+                            <label for="exampleInputEmail1">Endereço de e-mail</label>
+                            <input type="email" id="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Digite e-mail aqui">
+                            <small class="form-text text-muted">Nunca compartilharemos seu e-mail com
+                                mais ninguém.</small>
+                        </div>
+                        <div class="form-group py-1">
+                            <label for="sex">Sexo</label>
+                            <select class="form-select" id="sexo" aria-label="Default select example">
+                                <option selected>Selecione</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Feminino</option>
+                                <option value="3">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="dataNasc">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="dataNasc">
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="exampleInputPassword1">Senha</label>
+                            <div class="input-group">
+                              <input type="password" class="form-control" id="senha" placeholder="Digite a senha aqui">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" id="change" type="button"><i class="fa fa-eye-slash" id="olho" aria-hidden="true"></i></button>
+                              </div>
+                            </div>
+                            <small class="form-text text-muted">* Senha deve conter no mínimo 6 caracteres. *</small>
+                          </div>
+                        <hr />
+                        <h5 class="py-1 mt-2">Endereço</h5>
+
+                        <div class="form-group py-1">
+                            <label for="cep">CEP</label>
+                            <input type="number" class="form-control" id="cep" placeholder="Digite o cep ">
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro ">
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="rua">Rua</label>
+                            <input type="text" class="form-control" id="rua" placeholder="Digite a rua ">
+                        </div>
+
+                        <div class="form-group py-1">
+                            <label for="numero">Número</label>
+                            <input type="number" class="form-control" id="numero" placeholder="Digite o número">
+                        </div>
+
+                        <div class="text-end mt-3">
+                            <button class="btn btn-primary" id="salvar">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </main>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold">TimeSupermercado</a>
+        </div>
+    </footer>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-database-compat.js"></script>
+
+
+
+<script src="https://kit.fontawesome.com/88b528e79b.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="../../js/app.js"></script>
+
+<script src="../js/usuario/dados.js"></script>
+
+</html>
